@@ -26,4 +26,11 @@ public class Publication {
         return title;
     }
 
+    @Override
+    public String toString() {
+        return "Публикация: " + title +
+                " \n Год: " + year +
+                ", автор: "+ '\'' + author + '\'' +
+                ", ссылается: " + ref;
+    }
 }
