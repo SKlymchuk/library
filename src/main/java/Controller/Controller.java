@@ -35,7 +35,6 @@ public class Controller {
                             view.printMessage(view.LINE);
                             break;
                         case 2:
-                            outer1:
                             while (true) {
                                 view.printMessage(view.FINDMENU);
                                 if (sc.hasNextInt()) {
@@ -56,14 +55,12 @@ public class Controller {
                                                 if (!find) {
                                                     view.printMessage(view.WRONGINPUT);
                                                     getYearsList();
-                                                    break;
                                                 }
-                                                break;
                                             } else {
                                                 view.printMessage(view.WRONGINPUT);
                                                 sc.nextLine();
-                                                break;
                                             }
+                                            break ;
 
                                         case 2:
                                             boolean findAuthor = false;
@@ -80,20 +77,26 @@ public class Controller {
                                                 if (!findAuthor) {
                                                     view.printMessage(view.WRONGINPUT);
                                                     getAuthorList();
-                                                    break;
                                                 }
                                             } else {
                                                 view.printMessage(view.WRONGINPUT);
                                                 sc.nextLine();
                                             }
+                                            break ;
                                         case 3:
-                                            break outer1;
+                                            break outer;
+
+                                        default: {
+                                            view.printMessage(view.WRONGINPUT);
+                                            break;
+                                        }
                                     }
-                                } else {
+                                }
+                                else {
                                     view.printMessage(view.WRONGINPUT);
                                     sc.nextLine();
                                 }
-                                break;}
+                            }
                                 case 3:
                                     break outer;
 
@@ -102,7 +105,8 @@ public class Controller {
                                     break;
                                 }
                             }
-                    } else{
+                    }
+                else{
                         view.printMessage(view.WRONGINPUT);
                         sc.nextLine();
                     }

@@ -6,7 +6,7 @@ public class Publication {
     private int year;
     private String author;
     private String title;
-    private ArrayList<Publication> ref;
+//    private ArrayList<Publication> ref;
 
     public Publication(String title, int year, String author){
         this.year = year;
@@ -30,7 +30,6 @@ public class Publication {
     public String toString() {
         return "Публикация: " + title +
                 " \n Год: " + year +
-                ", автор: "+ '\'' + author + '\'' +
-                ", ссылается: " + ref;
+                ", автор: "+ '\'' + author + '\'';
     }
 }
